@@ -1,0 +1,33 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    margin: 10px 0;
+    width: 80%;
+}
+
+.item {
+    width: 100%;
+}
+
+.item img {
+    width: 100px;
+}
+
+.summary {
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.cart {
+    width: 80%;
+}
+

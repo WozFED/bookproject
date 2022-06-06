@@ -1,0 +1,45 @@
+h2 {
+    font-size: 30px;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    padding: 25px;
+    width: 400px;
+    height: 425px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input {
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+    align-items: center;
+}
+button {
+    border: none;
+    background-color: #125488;
+    color: white;
+    width: 50%;
+    height: 35px;
+    margin: 5px 0;
+  }

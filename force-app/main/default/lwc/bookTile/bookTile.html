@@ -1,0 +1,10 @@
+<template>
+    <div class={classname} data-book-id={book.Id} onclick={handleEventClick}>
+        <img src={book.Image__c}>
+        <div class='info'>
+            <p>{book.Name}</p>
+            <p>{book.Author__c}</p>
+            <p>{book.Price__c}</p>
+        </div>
+    </div>
+</template>

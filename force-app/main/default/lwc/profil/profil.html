@@ -1,0 +1,25 @@
+<template>
+    <div class="wrapper">
+        
+        <div class="form">
+            <h2>You have to refill your data</h2>
+            <!-- <label>{firstName.label}</label>
+            <input value={firstName.value} onchange={firstName.change}> -->
+                <template for:each={inputs} for:item="item">
+                    <div key={uniqueId} class="input">
+                        <label for={item.label}>
+                            {item.label}
+                        </label>
+                        <input type='text' value={item.value} name={item.label} maxlength={item.length} id={item.label}
+                            onchange={item.change}>
+                    </div>
+  
+                
+            </template>
+            <div class="buttons">
+                <button onclick={updateData}>Update data</button>
+                <button onclick={closeForm}>Zamknij</button>
+            </div>
+        </div>
+    </div>
+</template>

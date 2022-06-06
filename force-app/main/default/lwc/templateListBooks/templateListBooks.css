@@ -1,0 +1,101 @@
+h3 {
+    color: black;
+}
+
+button {
+    background-color: rgba(18, 84, 136, 0.4);
+    color: white;
+    width: 100px;
+    height: 30px;
+    border: 1px solid;
+    z-index: 1;
+    margin: 5px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.books {
+    background: url('/s/webruntime/org-asset/9b87767950/resource/081IY0000005LmL');
+    width: calc(100vw - 130px);
+    height: calc(100vh - 130px);
+    display: flex;
+    margin: 0 auto;
+}
+
+.books__manager {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.manager {
+    height: 60%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.sort {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filter {
+    height: 100px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter div {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+
+.pagination {
+    width: 55%;
+    text-align: center;
+}
+
+@media screen and (max-width: 1050px){
+
+    .books {
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-size: 200% 200%
+    }
+    .books__manager {
+        width: 300px;
+        margin: 10px 0;
+    }
+    .manager {
+     
+        width: 100%;
+        height: 100%;
+    }
+    .list {
+        justify-content: center;
+        overflow-y: visible;
+    }
+}

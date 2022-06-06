@@ -1,0 +1,16 @@
+<template>
+    <div class = 'register'>
+        <div class = 'register__form'>
+        <template for:each={registerInputs} for:item="item">
+        <div key={uniqueId} class="register__element">
+        <label>{item.label}</label>
+        <input type='text' onchange={item.change} data-id={item.label} value={item.value}/>   
+        </div>
+        </template>
+        <button onclick={handleRegister}>Register</button>
+        </div>
+        
+    </div>
+    
+    
+</template>

@@ -1,0 +1,11 @@
+<template>
+    <div class="books">
+       
+         <template if:true={bookList} for:each={bookList} for:item="book">
+        <div key={uniqeId}>
+            <c-book-tile book={book}></c-book-tile>
+        </div>
+    </template>
+    </div>
+   
+</template>

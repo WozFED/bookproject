@@ -1,0 +1,29 @@
+<template>
+    <div class="search__wrapper">
+        <div class="inputs">
+        <input type="text" class="box" oninput={handleSearch} value={text}></input>
+        <div class="input__buttons">
+           <button onclick={prevPage}>Prev</button>
+            <button if:true={books} onclick={nextPage} value={books.data}>Next</button>
+            <button onclick={backToHeader}>End searching</button> 
+        </div>
+            
+        </div>
+        <div class="list">
+            <ul>
+            <template for:each={books.data} for:item="book">
+            <li key={book.Id} data-book-id={book.Id} onclick={handleNavigate}>
+                <img src={book.Image__c}>
+                <p>{book.Name}</p>
+                <p>{book.Author__c}</p>
+            </li>
+                
+            </template>
+            </ul>  
+            </div>
+            
+            
+            
+        
+    </div>
+</template>

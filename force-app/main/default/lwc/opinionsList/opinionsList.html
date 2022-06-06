@@ -1,0 +1,22 @@
+<template>
+    <div class="opinions">
+        <div class="header">
+            <h2>Opinions about site</h2>
+        </div>
+       <div class="wrapper" if:true={opinionsList}>
+        <div class="opinions__list" style={marginStyle}>
+           <template for:each={opinionsList} for:item="item">
+            <div key={item.Id} class="opinions__item">
+                <div class="item">
+                <p>{item.Name}</p>
+                <p>{item.Contact__r.Name}</p>
+                <p>{item.Value__c}</p>
+                </div>
+                
+            </div>
+        </template> 
+        </div>
+    </div>  
+    </div>
+   
+</template>

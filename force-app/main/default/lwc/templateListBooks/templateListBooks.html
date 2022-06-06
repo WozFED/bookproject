@@ -1,0 +1,47 @@
+<template>
+    <div class="books">
+        <div class="books__manager">
+            <div class="manager">
+
+                <div class="sort">
+                    <h3>Filter manager</h3>
+                    <select onchange={sortList}>
+                        <option>---</option>
+                        <option value=0>Price down</option>
+                        <option value=1>Price up</option>
+                        <option value=2>Sold up</option>
+                    </select>
+                </div>
+                <div class="filter">
+                    <div>
+                        <label>Horror</label>
+                    <input type='checkbox' name="Horror" onchange={allBooks}>
+                    </div>
+                    <div>
+                        <label>Science</label>
+                        <input type='checkbox' name="Science" onchange={allBooks}>
+                    </div>
+                    <div>
+                        <label>Fantasy</label>
+                        <input type='checkbox' name="Fantasy" onchange={allBooks}>
+                    </div>
+                </div>
+                <div class="pagination">
+                    <p>You are on: <strong>{index}</strong>/<strong>{pages.data}</strong> page</p>
+                    <button onclick={prevPage}>Prev</button>
+                    <button onclick={nextPage}>Next</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="list">
+            <template if:true={bookList} for:each={bookList} for:item="book">
+                <div key={uniqeId}>
+                    <c-book-tile classname={classname} book={book}></c-book-tile>
+                </div>
+            </template>
+        </div>
+    </div>
+
+
+</template>

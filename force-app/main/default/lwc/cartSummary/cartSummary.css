@@ -1,0 +1,65 @@
+h2, .total {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+button {
+    border: none;
+    background-color: orangered;
+    color: white;
+    width: 200px;
+    height: 35px;
+    margin: 5px;
+}
+
+.total {
+   color: #FF8000;
+}
+
+.opinion {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    top: 0px;
+    left: 0;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.opinion__wrapper {
+    height: 600px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.opinion__header {
+    display: flex;
+    align-items: center;
+    height: 20%;
+}
+.opinion__header button {
+    width: 20px; 
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+input {
+    width: 300px;
+    margin: 5px;
+}
+
+textarea {
+    width: 300px;
+    height: 200px;
+    margin: 5px;
+    resize: none;
+}

@@ -1,0 +1,17 @@
+.book {
+    width: 230px;
+    height: 160px;
+    border: 1px solid black;
+    padding: 5px;
+    display:flex;
+    align-items: flex-end;
+}
+
+.book img {
+    width: 100px;
+    height: 100%;
+}
+
+.info {
+    padding: 5px;
+}

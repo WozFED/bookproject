@@ -1,0 +1,26 @@
+<template>
+    <div class="header wrapper" if:false={search}>
+        <div class="header__content">
+            <h1 >Welcome in our bookstore!</h1>
+            <p>We hope you will find something for yourself here. 
+            We offer books of different categories, 
+            click a button to see how to behave or go shopping right now!</p>
+            <div class="buttons">
+            <button onclick={handleBookList}>Go shopping!</button>
+            <button onclick={showSearch}>Or find somehting!</button>
+            </div>       
+        </div>
+        <div class="header__bestseller">
+            <h2>Bestseller!</h2>
+            <div class="header__book" if:true={bestSellerBook}>
+                <img src={bestSellerBook.Image__c}>
+                <p>{bestSellerBook.Name}</p>
+                <p>{bestSellerBook.Author__c}</p>
+            </div>
+        </div>
+       
+    </div>
+    <div class="search wrapper" if:true={search}>
+            <c-header-search onheader={showSearch}></c-header-search>
+        </div>
+</template>

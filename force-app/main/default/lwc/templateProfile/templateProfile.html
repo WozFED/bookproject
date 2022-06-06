@@ -1,0 +1,57 @@
+<template>
+    <div class='main'>
+        
+        <div class="wrapper">
+            <div class="form">
+                <template if:true={contactInformation}>
+                    <template for:each={arrayForm} for:item="item">
+                        <div key={uniqueId} class="input">
+                            <label for={item.label}>
+                                {item.label}
+                            </label>
+                            <input type='text' value={item.value} name={item.label} maxlength="20" id={item.label}
+                                onchange={handleInput}>
+                        </div>
+                    </template>
+                </template>
+                <div class="buttons">
+                    <button onclick={updateData}>Update data</button>
+                </div>
+            </div>
+        </div>
+        <div class="orders">
+            <table>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Address</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                </tr>
+                <template for:each={orderArray} for:item="order" for:index="index">
+                    <tr key={order.id} onclick={handleDetails} data-id={order.id}>
+                        <th>{order.name}</th>
+                        <th>{order.street}, {order.city}</th>
+                        <th>{order.total}$</th>
+                        <th>{order.status}</th>
+                        <th>{order.date}</th>
+                    </tr>
+                    <tr key={order.id} if:true={order.show}>
+                        <th>Name</th>
+                        <th>Quantity</th>
+                    </tr>
+                    <template for:each={order.details} for:item="item" if:true={order.show}>
+                        <tr key={order.id} class="border-none">
+                            <th>{item.Name}</th>
+                            <th>{item.Quantity__c}</th>
+
+                        </tr>
+                    </template>
+                </template>
+            </table>
+        </div>
+        <!-- <div class="orders height" if:false={orderArray}>
+            <p>You have not order yet...</p>
+        </div> -->
+    </div>
+</template>

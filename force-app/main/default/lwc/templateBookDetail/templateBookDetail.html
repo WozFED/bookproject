@@ -1,0 +1,45 @@
+<template>
+    <div class="detail">
+        <div class="detail__book" if:true={book.data}>
+            <div class="book">
+                <img src={book.data.Image__c}>
+            <div class="info">
+                <div class="info__tabs">
+                <ul>
+                    <li onclick={showGeneral}>general</li>
+                    <li onclick={showDescription}>description</li>
+                    <li onclick={showRating}>rate</li>
+                    <li onclick={showOpinions}>opinions</li>
+                </ul>
+                </div>
+                <div class="general" if:true={general}>
+                    <div class="general__info">
+                    <p>Title: {book.data.Name}</p>
+                    <p>Author: {book.data.Author__c}</p>
+                    <p>Amount: {book.data.Availability__c}</p>
+                    <p>Price: {book.data.Price__c}</p>
+                    <p>Grade: {grade}</p>
+                    <p if:true={thisItem}>You have {pieces} this items in your cart</p>
+                    </div>
+                    <div class="general__cart">
+                    <button onclick={handleClick} if:true={islogged}>Add to cart</button>
+                    <button if:true={inCart} onclick={handleDelete}>Delete from cart</button>
+                    </div>
+                    <div if:true={error} class="general__error">
+                        <p>There is no more in our bookstore</p>
+                    </div>
+                   
+                </div>
+                <div class="description" if:true={description}>
+                    <p>{book.data.Description__c}</p>
+                </div>
+                <div class="rating" if:true={rating}>
+                    <c-rating book-id={bookId} onrefresh={refreshBook}></c-rating>
+                </div>
+
+            </div>
+            </div>
+            
+        </div>
+    </div>
+</template>

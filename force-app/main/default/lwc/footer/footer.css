@@ -1,0 +1,49 @@
+a {
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 5px;
+}
+textarea, input {
+    border-radius: 5px;
+    outline:none;
+    border:none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+textarea {
+    width: 600px;
+    height: 200px; 
+}
+
+input {
+    width: 250px;
+    height: 25px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.form {
+    width: 300px; 
+    flex-basis: 50%;
+    padding: 30px;
+    margin: 0 auto;
+}
+.links {
+    flex-basis: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

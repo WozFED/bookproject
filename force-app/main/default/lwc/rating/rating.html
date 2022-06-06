@@ -1,0 +1,26 @@
+<template>
+    <div class="rating__wrapper">
+        <div class="rates">
+          <template for:each={rates.data} for:item='rate'>
+            <div key={uniqueId} class='rate'>
+               <p>Title: {rate.Name}</p>
+                <p>Grade: {rate.Rate__c}</p> 
+                <p>Description: {rate.Opinion__c}</p>
+            </div>
+            
+        </template>  
+        </div>
+        
+        <div class="add" if:true={islogged}> 
+            <ul>
+            <template for:each={grades} for:item="grade">
+                <li key={uniqueId} onclick={changeRate} value={grade}>{grade}</li>
+            </template> 
+            </ul>
+            <input type="text" placeholder='Title' value={title} maxlength="20" onchange={updateTitle}>
+            <textarea  placeholder='Opinion' value={text} onchange={updateText}></textarea>
+            <p>Your rate: {rate}</p>
+            <button onclick={addRate} >Rate this book</button>
+        </div>
+    </div>
+</template>

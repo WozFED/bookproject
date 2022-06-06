@@ -1,0 +1,24 @@
+<template>
+    <div>
+      <template if:true={contactInformation}>
+        <c-profil if:true={openform} oncloseform={closeForm}></c-profil>  
+      </template>
+    <h2>Your cart</h2>
+    <div class="total" if:true={items}>Total value: {totalValue}$</div>  
+    <div>
+      <button onclick={handleClick}>Buy it!</button>  
+    </div>
+    <div if:true={opinion} class="opinion">
+      <div class="opinion__wrapper">
+          <div class="opinion__header">
+        <h2>We will be honored if you leave your opinion</h2>
+        <button onclick={leave}>X</button>
+      </div>
+      <input type='text' placeholder='Title' onchange={handleTitleChange} value={title}>
+        <textarea placeholder='Review...' onchange={handleChange} value={text}></textarea>
+        <button onclick={handleOpinion}>Finish</button>
+      </div>  
+    </div>
+    </div>
+    
+</template>

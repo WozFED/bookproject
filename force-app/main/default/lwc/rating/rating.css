@@ -1,0 +1,59 @@
+button {
+    background-color: orangered;
+    border: none;
+    color: white;
+    font-weight: 800;
+    width: 150px;
+    height: 40px;
+    margin: 10px 0;
+}
+
+input {
+    width: 200px;
+    margin: 10px 0;
+}
+textarea {
+    resize: none;
+    width: 300px;
+    height: 100px;
+}
+.rate {
+    width:50%;
+    margin: 10px 0;
+}
+
+.rates {
+    height: 100px;
+    overflow: overlay;
+    border: 3px solid orangered;
+}
+.rates__not-logged {
+    height: 80%;
+}
+.add {
+    display: flex;
+    flex-direction: column;
+}
+ul {
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+li {
+    cursor: pointer;
+}
+
+li:checked {
+    border: 1px solid orangered;
+}
+
+@media screen and (max-width: 1050px){
+    ul {
+        width: 100%;
+    }
+    textarea {
+        width: 200px;
+    }
+}

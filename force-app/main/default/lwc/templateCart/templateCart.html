@@ -1,0 +1,18 @@
+<template>
+    <div class="main">
+        <div class="main__header">
+            <c-cart-summary if:true={show} items={cartItems} onorder={handleRefresh}></c-cart-summary>
+            <template if:false={show}>
+                <p>Your cart is empty...</p>
+            </template>
+        </div>
+        <div class="cart">
+            <div class="cart__item">
+                <template if:true={cartItems} for:each={cartItems} for:item="item">
+                        <c-cart-item key={uniqueId} onrefresh={handleRefresh} item={item}></c-cart-item>
+                </template>
+            </div> 
+        </div>
+        
+    </div>
+</template>

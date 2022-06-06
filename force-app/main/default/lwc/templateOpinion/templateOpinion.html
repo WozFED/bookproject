@@ -1,0 +1,16 @@
+<template>
+    <div class="section">
+        <div class="opinions" if:true={opinionsList}>
+
+               <template for:each={opinionsList.data} for:item="item">
+                <div key={item.Id}>
+                    <p>{item.Name}</p>
+                    <p>{item.Contact__r.Name}</p>
+                    <p>{item.Value__c}</p>
+                </div>
+            </template> 
+
+            
+        </div>
+    </div>
+</template>

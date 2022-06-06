@@ -1,0 +1,34 @@
+<template >
+    <div class='slider' style={background}> 
+        <div class = 'description'>
+            <div class='description__text'>
+                <h2>{object.title}</h2>
+                 <p>{object.description}</p>
+            </div>
+        </div>
+
+            <div class='book'>
+                <ul class={classMargin}
+                data-id="list">
+                    <template for:each={array} for:item="book">
+                        <li key={book.Name}>
+                            <c-card-item 
+                            state={state}
+                            book={book}
+                            value={itemIndex}
+                            margin={margin}
+                            ></c-card-item>
+                        </li>
+               </template>
+                </ul>
+                <div class ='buttons'>
+                <button onclick={back}>Previous</button>
+                <button onclick={move}>Next</button>  
+                </div>
+               
+                
+            </div>
+
+        
+    </div>
+</template>

@@ -1,0 +1,119 @@
+.slider{
+    top: 92vh;
+    width: 95vw;
+    text-align: center;
+    height: 93vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: 125% 110%;
+    background-position: 100% 100%;
+    margin-right: 100px;
+}
+
+.description {
+    width: 35%;
+    height: 100%;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+.description img {
+    height: 100%;
+    width: 100%;
+}
+.description__text {
+    width: 60%;
+    text-align: left;
+    font-size: 25px;
+    color: white;
+}
+
+.book {
+    width: 720px;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    height: 95%;
+}
+
+ul {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+ul[class*="slider"] {
+    display: flex;
+    transition: 0.25s margin ease-in;
+    z-index: 0;
+    height: 100%;
+    align-items: center;
+}
+.slider1 {
+    margin-left: -350px;
+}
+.slider2 {
+    margin-left: -700px;
+}
+.slider3 {
+    margin-left: -1050px;
+}
+
+
+li {
+    width: 300px;
+    height: 500px;
+    margin: 25px;
+}
+
+.buttons {
+    position: absolute;
+    left: 3%;
+    display: flex;
+    top: 94%;
+}
+button {
+        background-color: rgba(18, 84, 136, 0.4);
+        color: white;
+        width: 85px;
+        margin: 5px;
+        border: 1px solid;
+        z-index: 1;
+    }
+
+@media screen and(max-width: 950px){
+    .book {
+        width: 300px;
+    }
+}
+@media screen and (max-width: 600px){
+    .book {
+        width: 300px;
+    }
+    .description {
+        display: none;
+    }
+    .card__description {
+        display: none;
+    }
+    .buttons {
+        top: 94%;
+    left: 32%;
+
+    }
+
+    ul[class*="slider"] {
+        margin-top: 25px;
+    }
+
+    li {
+        height: 400px;
+    }
+}

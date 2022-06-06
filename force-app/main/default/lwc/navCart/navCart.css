@@ -1,0 +1,74 @@
+button{
+    width: 100%;
+    height: 35px;
+    background-color: orangered;
+    color: white;
+    border: none;
+    margin: 10px 0;
+}
+
+h2{
+    font-size: 20px;
+    color: white;
+}
+
+.detail {
+    position: fixed;
+    height: 100%;
+    background-color: white;
+    width: 400px;
+    right: 0;
+    z-index: 3;
+    top: 0;
+    animation-name: show;
+    animation-duration: 1.5s;
+}
+
+.detail__header{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    background-color: orangered;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.background {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    width: 100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index: 2;
+}
+
+.book {
+    padding: 10px 0;
+    width:90%;
+    margin: 0 auto;
+    border-bottom: 1px solid lightgray;
+}
+
+.book__info {
+    display:flex;
+}
+.book__info img {
+    width: 150px;
+}
+
+.info {
+    padding: 0 10px;
+}
+
+
+.price {
+    color: #FF8000;
+    font-size: 18px;
+}
+
+@keyframes show {
+    from {right: -400px}
+    to {right: 0;}
+}

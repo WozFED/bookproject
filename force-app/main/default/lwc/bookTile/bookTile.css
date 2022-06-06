@@ -1,0 +1,51 @@
+.tile {
+    width: 200px;
+    height: 250px;
+    margin: 40px;
+    position: relative;
+    margin-right: 90px;
+}
+
+.rate {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: 1s;
+    opacity: 0;
+}
+
+.info p {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.tile:hover, .rate:hover .info, .rate {
+    opacity: 1;
+}
+
+@media screen and (max-width: 1300px){
+   
+    .tile {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 1050px){
+    .tile {
+        margin-right: 50px;
+    }
+}

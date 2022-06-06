@@ -1,0 +1,125 @@
+tr:not(:first-child) {
+    border-top: 1px solid;
+    cursor: pointer;
+    transition: 1s all;
+}
+
+th {
+    border-right: 1px solid;
+    text-align: center;
+    height: 25px;
+}
+th:last-child {
+    border-right: none;
+}
+table {
+    height: 0;
+    width:90%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.border-none {
+    border: none !important;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    width: calc(100vw - 130px);
+    margin: 0 auto;
+    height: calc(100vh - 130px);
+    background: url('/s/webruntime/org-asset/9b87767950/resource/081IY0000005LmL');
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    margin: 25px 0;
+    width: 40%;
+}
+
+.form {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.orders {
+    width: 60%;
+    flex-wrap: wrap;
+    display: flex;
+    height: 400px;
+    overflow-y: auto;
+}
+
+.order__wrapper {
+    width: 300px;
+    padding: 5px;
+    background-color: #125488;
+    color: white;
+    margin: 10px;
+}
+
+.order__book {
+    margin: 10px 0;
+}
+
+.height{ 
+    height: 103px;
+}
+.input {
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+    align-items: center;
+}
+button {
+    border: none;
+    background-color: #125488;
+    color: white;
+    width: 50%;
+    height: 35px;
+    margin: 5px 0;
+  }
+
+  @media screen and (max-width: 1250px){
+      .main {
+          flex-direction: column;
+          height: 100%;
+      }
+      table {
+          width: 100%;
+      }
+  }
+
+  @media screen and (max-width: 900px){
+     .main {
+         width: 100%;
+     }
+
+     .wrapper {
+         width: auto;
+     }
+     .orders {
+         width: 100%;
+     }
+
+     .form {
+         padding: 20px;
+     }
+     .input {
+         width: 270px;
+     }
+  }

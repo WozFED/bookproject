@@ -1,0 +1,26 @@
+<template>
+    <div class='cart'>
+        <template if:true={book}>
+            <template if:true={show}>
+                <div class="background">
+                    <div class="detail" onclick={handleContainerClick}>
+                        <div class="detail__header">
+                            <h2>Added to cart</h2>
+                        </div>
+                        <div class="book">
+                            <div class="book__info">
+                                <img src={book.Image__c}>
+                                <div class="info">
+                                    <p class="price"><strong>{book.Price__c}$</strong></p>
+                                    <p><strong>{book.Name}</strong></p>
+                                    <p>{book.Author__c}</p>
+                                </div>
+                            </div>
+                            <button onclick={handleNavigate}>Go to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </template>
+    </div>
+</template>

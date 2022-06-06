@@ -1,0 +1,29 @@
+<template>
+    <div class="item">
+        <div class="info">
+            <img src={item.Image__c}>
+            <div class="description">
+                <div class="description__text">
+                    <h2>{item.Name}</h2>
+                    <p>{item.Author__c}</p>
+                    <p>Amount: {item.Availability__c}</p>
+                    <p>Price: {item.Price__c}$/item</p>
+                    <!-- <p>Total price: {totalValue}$</p> -->
+                </div>
+                <div class="input">
+                    <p if:true={tooMany} class="warn">There is no more in our storehouse</p>
+                    <button if:true={value} onclick={handleClick} value='-1'>-</button>
+                    <button if:false={value} onclick={handleDeleteClick}>X</button>
+                    <input type="number" min='0' value={item.Quantity__c} data-avaiable={item.Availability__c}
+                        onfocusout={handleChangeLostFocus} oninput={handleChange}>
+                    <button onclick={handleClick} value='1' data-avaiable={item.Availability__c}>+</button>
+                </div>
+                
+
+            </div>
+        </div>
+
+
+
+    </div>
+</template>

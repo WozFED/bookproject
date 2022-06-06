@@ -1,0 +1,83 @@
+p {
+    color:black;
+}
+
+h2 {
+    font-size: 30px;
+    color: white;
+}
+
+.opinions {
+    background: url('/s/webruntime/org-asset/9b87767950/resource/081IY00000054pc');
+    background-size: 100% 100%;
+    width: calc(100vw - 130px);
+    /* height: 50vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    height: 50px;
+    display: flex;
+    width: 80%;
+    margin: 25px 0;
+}
+
+.wrapper {
+    width: 800px;
+    overflow: hidden;
+    height: 420px;
+}
+
+.opinions__list {
+    height:100%;
+    transition: 1s;
+}
+
+.opinions__item {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;;
+}
+
+.item {
+    width: 500px;
+    height: 100%;
+    background-color: white;
+    /* display: flex; */
+    border: 2px solid orangered;
+    margin: 10px 0;
+    word-wrap: break-word;
+}
+.opinions__item div p:first-child {
+    font-size: 25px;
+}
+
+button {
+    position: absolute;
+}
+
+@media screen and (max-width: 630px){
+    .opinions {
+        width: 100vw;
+    }
+
+    .item {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .item {
+        width: 250px;
+        overflow: auto;
+    }
+}
+

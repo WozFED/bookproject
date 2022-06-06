@@ -1,0 +1,12 @@
+<template>
+    <div class="book">
+        <img src={book.Image__c}/>
+        <div class="info" onclick={handleNavigate}>
+        <p>{book.Name}</p>
+        <p>{book.Author__c}</p>
+        <p>{book.Price__c}</p>
+        <button onclick={addToCart}>Add to cart</button>
+        </div>
+       
+    </div>
+</template>

@@ -1,0 +1,23 @@
+<template>
+    <div class="service">
+        <div class="header">
+            <h2>Contact with us!</h2>
+        </div>
+        <div class="form">
+        
+        <template  for:each={inputs} for:item="input">
+        <div key={uniqueId}>
+        <label  for={input.value}>{input.label}</label>
+        <input type={input.type} name={input.label} value={input.value} onchange={input.change} id={input.value}>
+        <p if:true={input.error}>{input.errorMessage}</p>
+        
+            </div>
+            
+        </template>
+        <label>Describe your problem</label>
+        <textarea value={description} placeholder="Your problem is?" onchange={bodyMessage}></textarea>
+        <p if:true={error}>Inputs cannot be empty</p>
+        <button onclick={sendMail}>Send message</button>
+    </div>
+    </div>
+</template>

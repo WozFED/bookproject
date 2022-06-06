@@ -1,0 +1,25 @@
+<template>
+    <div class="rating">
+        <div class="header">
+            <h2>Best of store</h2>
+        </div>
+        <ul>
+        <template for:each={bestBooks.data} for:item="book">
+            <!-- <li key={book.Id} data-book-id={book.Id} onclick={handleEventClick}>
+            <img src={book.Image__c}>
+            <div class="info">
+                <p>{book.Name}</p>
+                <p>{book.Author__c}</p>
+                <p>{book.Price__c}</p>
+                <p>{book.Rating__c}</p>
+            </div>
+            </li> -->
+            <li key={book.Id}>
+                  <c-book-tile classname={classname} book={book}></c-book-tile> 
+            </li>
+         
+        </template>
+        </ul>
+
+    </div>
+</template>
